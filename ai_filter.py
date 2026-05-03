@@ -1,20 +1,32 @@
 from nudenet import NudeDetector
+import config
 
 detector = NudeDetector()
 
+
 def check_image(image_path):
+    """
+    Returns True if image is safe.
+    Returns False if image is unsafe.
+    """
 
-    result = detector.detect(image_path)
+    try:
+        result = detector.detect(image_path)
 
-    # if nothing detected → safe
-    if len(result) == 0:
+        if len(result) == 0:
+            return True
+
+        for item in result:
+            score = item.get("score", 0)
+
+            if score >= config.NUDE_CONFIDENCE_LIMIT:
+                return False
+
         return True
 
-    # check confidence
-    for item in result:
-        score = item['score']
+    except Exception as e:
+        print("AI filter error:", e)
 
-        if score > 0.7:   # strong detection
-            return False
-
-    return True
+        # Safer decision:
+        # If AI filter fails, do not approve image automatically.
+        return False

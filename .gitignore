@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+
+media/photos/*
+media/videos/*
+uploads/*
+
+.env
+.DS_Store
