@@ -1,0 +1,9 @@
+Flask==3.1.0
+flask-cors==5.0.1
+numpy==1.26.4
+opencv-python-headless==4.10.0.84
+mediapipe==0.10.14
+nudenet==3.4.2
+onnxruntime==1.23.2
+Pillow==11.2.1
+gunicorn==22.0.0

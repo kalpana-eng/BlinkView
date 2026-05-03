@@ -1249,3 +1249,18 @@ For cloud testing, use only upload/filter/gallery APIs.
 
 ## 23. Project Backend developer
 Kalpana Kumari
+
+
+
+ current project 
+ we would say bcz its working with web cam 
+ BlinkView Prototype Mode
+
+ features
+ /life or /live = camera feed
+/capture/photo = photo capture
+/capture/video = video capture
+/blink-control = blink detection
+/gallery = saved media list
+/upload/image = AI filter test
+/filter/image = AI safety check
